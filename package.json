@@ -1,0 +1,26 @@
+{
+  "name": "cycle-examples",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Sean Bowman",
+  "license": "MIT",
+  "dependencies": {
+    "@cycle/core": "6",
+    "@cycle/dom": "9",
+    "rx": "4",
+    "@cycle/isolate": "1.0.x",
+    "rx-combine-latest-obj": "^1.0.2"
+  },
+  "devDependencies": {
+    "browserify": "11.0.1",
+    "babel": "5.6.x",
+    "babelify": "6.1.x",
+    "mkdirp": "0.5.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebrowserify": "mkdirp dist",
+    "build-eyes": "mkdirp dist && browserify src/eyes.js -t babelify --outfile dist/main.js",
+    "build-multicounter": "mkdirp dist && browserify src/multicounter.js -t babelify --outfile dist/main.js"
+  }
+}
